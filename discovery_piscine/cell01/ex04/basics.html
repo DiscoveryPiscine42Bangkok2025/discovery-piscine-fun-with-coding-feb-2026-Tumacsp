@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basics</title>
+    <style>
+      body {
+        background-color: #ffc0cb;
+        margin: 0;
+        padding: 40px 20px;
+        font-family: sans-serif;
+      }
+
+      h1 {
+        color: white;
+        text-align: center;
+        font-size: 3.5rem;
+        margin-bottom: 50px;
+      }
+
+      .shop-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 60px;
+        margin-bottom: 40px;
+      }
+
+      .shop-item {
+        text-align: center;
+        width: 250px;
+      }
+
+      .shop-item img {
+        max-width: 100%;
+        height: auto;
+        max-height: 100px;
+        display: block;
+        margin: 0 auto 20px auto;
+      }
+
+      .shop-item a {
+        color: #333;
+        text-decoration: underline;
+        font-weight: bold;
+      }
+
+      hr {
+        border: 0;
+        height: 1px;
+        background: #333;
+        margin: 40px 0 10px 0;
+        width: 100%;
+      }
+
+      .footer {
+        text-align: center;
+        font-style: italic;
+        font-family: monospace;
+        font-size: 1rem;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Basics &trade;</h1>
+
+    <div class="shop-container">
+      <div class="shop-item">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+          alt="Amazon Icon"
+        />
+        <a href="https://www.amazon.com" target="_blank">Visit Amazon</a>
+      </div>
+
+      <div class="shop-item">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg"
+          alt="eBay"
+        />
+        <a href="https://www.ebay.com" target="_blank">Visit eBay</a>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="footer">&copy; nvisasmo 2026</div>
+  </body>
+</html>
