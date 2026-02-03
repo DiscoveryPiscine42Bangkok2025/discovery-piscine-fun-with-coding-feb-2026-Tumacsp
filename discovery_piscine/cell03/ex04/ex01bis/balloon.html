@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 3-01</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        user-select: none;
+      }
+
+      #balloon {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.1s ease-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="balloon"></div>
+
+    <script>
+      $(document).ready(function () {
+        const $balloon = $("#balloon");
+
+        let currentSize = 200;
+        let colorIndex = 0;
+        const colors = ["red", "green", "blue"];
+
+        // use .css for changes
+        function updateBalloon() {
+          $balloon.css({
+            width: currentSize + "px",
+            height: currentSize + "px",
+            "background-color": colors[colorIndex],
+          });
+        }
+
+        // 1. Click Event (Grow + Next Color)
+        $balloon.on("click", function () {
+          currentSize += 10;
+
+          if (currentSize > 420) {
+            currentSize = 200;
+            colorIndex = 0;
+          } else {
+            colorIndex++;
+            if (colorIndex >= colors.length) {
+              colorIndex = 0;
+            }
+          }
+          updateBalloon();
+        });
+
+        // 2. Mouse Leave Event (Shrink + Previous Color)
+        $balloon.on("mouseleave", function () {
+          currentSize -= 5;
+
+          if (currentSize < 200) {
+            currentSize = 200;
+          }
+
+          colorIndex--;
+          if (colorIndex < 0) {
+            colorIndex = colors.length - 1;
+          }
+
+          updateBalloon();
+        });
+      });
+    </script>
+  </body>
+</html>

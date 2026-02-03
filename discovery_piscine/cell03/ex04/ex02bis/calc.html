@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Calculator</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      .calculator {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      input[type="text"] {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100px;
+      }
+      select {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input[type="submit"] {
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 style="text-align: center">Basic Calculator</h1>
+    </div>
+    <div class="calculator">
+      <input type="text" id="leftNumber" placeholder="Left" />
+      <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+      </select>
+      <input type="text" id="rightNumber" placeholder="Right" />
+      <input type="submit" value="Try me!" id="calculateBtn" />
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        setInterval(() => {
+          alert("Please, use me...");
+        }, 30000);
+
+        $("#calculateBtn").on("click", function () {
+          const leftInput = $("#leftNumber").val();
+          const rightInput = $("#rightNumber").val();
+          const operator = $("#operator").val();
+
+          // Regex to check for positive integers
+          const isPositiveInteger = (str) => /^\d+$/.test(str);
+
+          // Validation
+          if (!isPositiveInteger(leftInput) || !isPositiveInteger(rightInput)) {
+            alert("Error :(");
+            return;
+          }
+
+          const l = parseInt(leftInput, 10);
+          const r = parseInt(rightInput, 10);
+          let result;
+
+          // Division by zero check
+          if ((operator === "/" || operator === "%") && r === 0) {
+            const msg = "It's over 9000!";
+            console.log(msg);
+            alert(msg);
+            return;
+          }
+
+          // Calculation Logic
+          switch (operator) {
+            case "+":
+              result = l + r;
+              break;
+            case "-":
+              result = l - r;
+              break;
+            case "*":
+              result = l * r;
+              break;
+            case "/":
+              result = l / r;
+              break;
+            case "%":
+              result = l % r;
+              break;
+          }
+
+          console.log(result);
+          alert(result);
+        });
+      });
+    </script>
+  </body>
+</html>
