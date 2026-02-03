@@ -1,0 +1,77 @@
+/* Reset basic margins */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: #777;
+}
+
+/* --- The Parallax Effect Logic --- */
+.parallax {
+  /* The image used */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* This is the key line for Parallax: */
+  /* "fixed" means the background stays in place while you scroll */
+  background-attachment: fixed;
+
+  /* Set height to 100% of the viewport */
+  min-height: 100vh;
+
+  /* Centering the text inside */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Specific Images (Using your links) --- */
+.image-1 {
+  /* Roll Safe Meme */
+  background-image: url("https://thehowler.org/wp-content/uploads/2018/01/roll-safe-meme-1.jpg");
+}
+
+.image-2 {
+  /* Programmer Meme */
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvzTAz0n_p5GyzLkmRP0JZ-r_Cd0dEfUmbjw&s");
+}
+
+/* --- Styling the Text/Caption --- */
+.caption {
+  width: 100%;
+  text-align: center;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* --- The Black Block Styling --- */
+.black-block {
+  color: #fff;
+  background-color: #000; /* Black block as requested */
+  text-align: center;
+  padding: 50px 80px;
+  text-align: justify;
+}
+
+.black-block h3 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
