@@ -10,29 +10,25 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      .bg-dot-pattern {
+        background-color: #121212;
+        background-image: radial-gradient(#1e3a8a 1px, transparent 1px);
+        background-size: 24px 24px;
+      }
+    </style>
   </head>
-  <body class="bg-slate-50 text-black min-h-screen flex flex-col">
-    <!-- Nav -->
-    <nav class="border-b border-black py-5">
-      <div
-        class="container mx-auto px-6 max-w-5xl flex justify-between items-center"
-      >
-        <span class="text-xl font-bold tracking-tighter uppercase"
-          >Portfolio.</span
-        >
-      </div>
-    </nav>
-
+  <body class="bg-dot-pattern text-black min-h-screen flex flex-col">
     <div
       class="container mx-auto px-6 max-w-5xl flex flex-col flex-1 justify-center py-12"
     >
       <div class="mb-16 text-center md:text-left">
         <h1
-          class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 uppercase"
+          class="text-5xl md:text-7xl text-white font-extrabold tracking-tight mb-4 uppercase"
         >
           Select Profile
         </h1>
-        <p class="text-base sm:text-xl text-gray-500 font-light">
+        <p class="text-base sm:text-xl text-white font-light">
           We are developers. We build things.
         </p>
       </div>
@@ -40,7 +36,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <a href="65070117.html">
           <div
-            class="border border-black hover:border-blue-600 hover:scale-105 transform p-4 rounded-xl transition duration-200"
+            class="bg-white border border-black hover:border-blue-600 hover:scale-105 transform p-4 rounded-xl transition duration-200"
           >
             <div class="h-80 w-full mb-4">
               <img
@@ -77,7 +73,7 @@
 
         <a href="65070118.html">
           <div
-            class="border border-black hover:border-blue-600 hover:scale-105 transform p-4 rounded-xl transition duration-200"
+            class="bg-white border border-black hover:border-blue-600 hover:scale-105 transform p-4 rounded-xl transition duration-200"
           >
             <div class="h-80 w-full mb-4">
               <img
@@ -113,14 +109,5 @@
         </a>
       </div>
     </div>
-
-    <footer class="bg-gray-900 text-center py-6 text-white">
-      &copy; <span id="current-year"></span>. All rights reserved.
-    </footer>
-    <script>
-      $(document).ready(function () {
-        $("#current-year").text(new Date().getFullYear());
-      });
-    </script>
   </body>
 </html>
