@@ -79,71 +79,73 @@
     </nav>
     <section
       id="home"
-      class="flex flex-col md:flex-row items-center justify-center px-6 py-16 md:py-24 relative overflow-hidden max-w-6xl mx-auto gap-8 md:gap-16"
+      class="flex flex-col justify-center items-center px-6 py-16 md:py-24 relative overflow-hidden min-h-[60vh]"
     >
       <div
-        class="relative group w-full md:w-1/2 flex justify-center md:justify-end"
+        class="max-w-5xl w-full mx-auto flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16"
       >
-        <div
-          class="bg-white p-3 shadow-xl rounded-sm transform transition-transform duration-500 group-hover:scale-105 w-64 h-auto border border-gray-100 relative z-10"
-        >
-          <img
-            src="https://avatars.githubusercontent.com/u/105029651?v=4"
-            alt="Nuntapong Profile"
-            class="w-full h-64 object-cover transition-all duration-500"
-          />
-        </div>
-      </div>
-
-      <div class="text-center md:text-left w-full md:w-1/2 relative z-10">
-        <div class="relative inline-block">
-          <h1
-            class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight uppercase mb-2 text-gray-900 leading-tight"
+        <div class="relative group flex-shrink-0">
+          <div
+            class="bg-white p-3 shadow-xl rounded-sm transform transition-transform duration-500 group-hover:scale-105 w-64 h-auto border border-gray-100 relative z-10"
           >
-            Nuntapong <br />
+            <img
+              src="https://avatars.githubusercontent.com/u/105029651?v=4"
+              alt="Nuntapong Profile"
+              class="w-full h-64 object-cover transition-all duration-500"
+            />
+          </div>
+        </div>
+
+        <div class="text-center md:text-left relative z-10">
+          <div class="relative inline-block">
+            <h1
+              class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight uppercase mb-2 text-gray-900 leading-tight"
+            >
+              Nuntapong <br />
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400"
+              >
+                Visasmongkolchai
+              </span>
+            </h1>
+
             <span
-              class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400"
+              class="block mx-auto md:mx-0 w-fit my-2 md:absolute md:-top-6 md:-right-8 bg-blue-600 text-white text-xs md:text-sm font-bold px-3 py-1 rounded-full shadow-md transform rotate-0 md:rotate-12 animate-pulse"
             >
-              Visasmongkolchai
+              Tum
             </span>
-          </h1>
+          </div>
 
-          <span
-            class="block mx-auto md:mx-0 w-fit my-2 md:absolute md:-top-6 md:-right-8 bg-blue-600 text-white text-xs md:text-sm font-bold px-3 py-1 rounded-full shadow-md transform rotate-0 md:rotate-12 animate-pulse"
+          <p
+            class="text-lg md:text-2xl text-gray-600 mt-4 font-light flex justify-center md:justify-start items-center gap-2"
           >
-            Tum
-          </span>
-        </div>
-
-        <p
-          class="text-lg md:text-2xl text-gray-600 mt-4 font-light flex justify-center md:justify-start items-center gap-2"
-        >
-          Full-Stack Developer
-          <span class="text-xl md:text-2xl hover:animate-spin cursor-default"
-            >🚀</span
-          >
-        </p>
-
-        <div class="mt-8 flex justify-center md:justify-start">
-          <a
-            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
-            class="inline-flex items-center px-8 py-3 bg-gray-900 rounded-full text-sm font-medium hover:bg-blue-600 text-white transition-all duration-300 shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-1"
-          >
-            <svg
-              class="w-4 h-4 mr-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+            Full-Stack Developer
+            <span class="text-xl md:text-2xl hover:animate-spin cursor-default"
+              >🚀</span
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-              ></path>
-            </svg>
-            Download Resume
-          </a>
+          </p>
+
+          <div class="mt-8 flex justify-center md:justify-start">
+            <a
+              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
+              class="inline-flex items-center px-8 py-3 bg-gray-900 rounded-full text-sm font-medium hover:bg-blue-600 text-white transition-all duration-300 shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-1"
+            >
+              <svg
+                class="w-4 h-4 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                ></path>
+              </svg>
+              Download Resume
+            </a>
+          </div>
         </div>
       </div>
     </section>
