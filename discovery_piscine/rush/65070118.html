@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <style>
       body {
@@ -537,8 +538,9 @@
       </div>
     </footer>
     <script>
-      document.getElementById("current-year").textContent =
-        new Date().getFullYear();
+      $(document).ready(function () {
+        $("#current-year").text(new Date().getFullYear());
+      });
     </script>
   </body>
 </html>
